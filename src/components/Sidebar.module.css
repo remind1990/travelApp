@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 767px) {
   .sidebar {
-    flex-basis: 46rem;
+    flex-basis: 36rem;
     height: none;
     padding: 2rem;
     box-sizing: border-box;
