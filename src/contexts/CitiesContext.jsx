@@ -81,7 +81,6 @@ function CitiesProvider({ children }) {
         const res = await fetch(`${BASE_URL}/users/${user.id}`);
         const data = await res.json();
         const city = data.cities.find((c) => c.id === Number(id));
-        console.log(data);
         dispatch({ type: 'city/loaded', payload: city });
       } catch (err) {
         dispatch({

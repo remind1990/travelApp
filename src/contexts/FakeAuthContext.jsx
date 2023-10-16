@@ -80,7 +80,6 @@ function AuthProvider({ children }) {
       },
     });
     const newUserData = await newUser.json();
-    console.log(newUserData);
     dispatch({ type: 'login', payload: newUserData });
   }
 
