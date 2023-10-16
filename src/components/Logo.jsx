@@ -6,7 +6,7 @@ function Logo() {
     <Link to="/">
       <img
         src="/logo2.png"
-        alt="WorldWise logo"
+        alt="UkrainianTrips logo"
         className={styles.logo}
       />
     </Link>

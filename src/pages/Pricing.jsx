@@ -11,7 +11,7 @@ export default function Product() {
           <h2>
             Simple pricing.
             <br />
-            Just $9/month.
+            Just $0/month.
           </h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
