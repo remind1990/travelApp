@@ -8,7 +8,7 @@
   background-color: var(--color-dark--2);
   border-radius: 7px;
   padding: 1rem 2rem;
-  border-left: 5px solid var(--color-brand--2);
+  border-left: 5px solid var(--color-brand--1);
   cursor: pointer;
 
   color: inherit;
@@ -16,8 +16,8 @@
 }
 
 .cityItem--active {
-  border: 2px solid var(--color-brand--2);
-  border-left: 5px solid var(--color-brand--2);
+  border: 1px solid var(--color-brand--1);
+  border-left: 5px solid var(--color-brand--1);
 }
 
 .emoji {

@@ -1,9 +1,9 @@
 .homepage {
   height: calc(100vh - 5rem);
   margin: 2.5rem;
-  background-image: linear-gradient(
-      rgba(36, 42, 46, 0.8),
-      rgba(36, 42, 46, 0.8)
+  background-image: radial-gradient(
+      rgba(119, 114, 128, 0.5),
+      rgba(68, 45, 104, 0.3)
     ),
     url('../bg.jpg');
   background-size: cover;
@@ -29,7 +29,8 @@
 .homepage h2 {
   width: 90%;
   font-size: 1.9rem;
-  color: var(--color-light--1);
+  color: #9fb3ba;
+  text-shadow: #393737 1px 1px 0;
   margin-bottom: 2.5rem;
 }
 
