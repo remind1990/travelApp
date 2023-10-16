@@ -8,3 +8,13 @@
   align-items: center;
   height: calc(100vh - 4.8rem);
 }
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    flex-basis: 46rem;
+    height: none;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+}

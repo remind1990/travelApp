@@ -32,3 +32,13 @@
 .product section a {
   margin-top: 2rem;
 }
+
+@media screen and (max-width: 767px) {
+  .product {
+    padding: 1rem;
+  }
+  .product section {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+}

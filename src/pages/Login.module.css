@@ -29,3 +29,13 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 767px) {
+  .login {
+    margin: 1.5rem;
+    padding: 1rem;
+  }
+  .form {
+    width: 100%;
+  }
+}

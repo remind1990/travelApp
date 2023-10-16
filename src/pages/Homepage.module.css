@@ -32,3 +32,22 @@
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
 }
+
+@media screen and (max-width: 767px) {
+  .homepage {
+    width: 90%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 2rem;
+  }
+  .homepage section {
+    height: 85%;
+  }
+  .homepage h1 {
+    font-size: 3rem;
+  }
+  .homepage h2 {
+    width: 90%;
+    font-size: 2.2rem;
+  }
+}

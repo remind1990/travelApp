@@ -32,3 +32,10 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .user {
+    position: static;
+    justify-content: space-between;
+  }
+}
