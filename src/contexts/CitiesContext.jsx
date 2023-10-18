@@ -97,8 +97,9 @@ function CitiesProvider({ children }) {
       dispatch({ type: 'loading' });
       const userWithNewCity = {
         ...user,
-        cities: [...user.cities, newCity],
+        cities: [...cities, newCity],
       };
+
       const res = await fetch(`${BASE_URL}/users/${user.id}`, {
         method: 'PUT',
         body: JSON.stringify(userWithNewCity),
@@ -106,20 +107,24 @@ function CitiesProvider({ children }) {
           'Content-Type': 'application/json',
         },
       });
-      const data = await res.json();
-      dispatch({
-        type: 'city/created',
-        payload: {
-          cities: data.cities,
-          currentCity: newCity,
-        },
-      });
+      if (res.ok) {
+        const data = await res.json();
+        console.log(data.cities, cities);
+        dispatch({
+          type: 'city/created',
+          payload: {
+            cities: data.cities,
+            currentCity: newCity,
+          },
+        });
+      }
     } catch (err) {
       dispatch({
         type: 'rejected',
         payload: 'Error creating city',
       });
     }
+    console.log(cities);
   }
 
   async function deleteCity(id) {
