@@ -15,6 +15,8 @@ import Button from './Button';
 import { useURLPosition } from '../hooks/userURLPosition';
 import { iconMarker } from '../ui/customMarker';
 
+const mapStyles =
+  'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}';
 export default function Map() {
   const [mapPosition, setMapPosition] = useState([42, 13]);
   const { cities } = useCities();
@@ -55,7 +57,7 @@ export default function Map() {
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+          url={mapStyles}
         />
         {cities.map((city) => (
           <Marker
