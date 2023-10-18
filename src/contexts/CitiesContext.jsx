@@ -109,7 +109,6 @@ function CitiesProvider({ children }) {
       });
       if (res.ok) {
         const data = await res.json();
-        console.log(data.cities, cities);
         dispatch({
           type: 'city/created',
           payload: {
@@ -124,7 +123,6 @@ function CitiesProvider({ children }) {
         payload: 'Error creating city',
       });
     }
-    console.log(cities);
   }
 
   async function deleteCity(id) {
