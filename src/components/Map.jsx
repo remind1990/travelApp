@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Map.module.css';
 import {
@@ -13,6 +13,7 @@ import { useCities } from '../contexts/CitiesContext';
 import { useGeolocation } from '../hooks/useGeolocation';
 import Button from './Button';
 import { useURLPosition } from '../hooks/userURLPosition';
+import { iconMarker } from '../ui/customMarker';
 
 export default function Map() {
   const [mapPosition, setMapPosition] = useState([42, 13]);
@@ -60,6 +61,7 @@ export default function Map() {
           <Marker
             key={city.id}
             position={[city.position.lat, city.position.lng]}
+            icon={iconMarker}
           >
             <Popup>
               <span>{city.emoji}</span> <span>{city.cityName}</span>
